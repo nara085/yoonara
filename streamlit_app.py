@@ -123,6 +123,15 @@ st.markdown(
         font-weight: 700;
     }
 
+    .activity-category-title {
+        margin: 2rem 0 .85rem;
+        color: var(--ink);
+        font-family: 'Gowun Batang', 'Noto Serif KR', serif;
+        font-size: 1.4rem;
+        font-weight: 700;
+        line-height: 1.45;
+    }
+
     .section-heading { margin-bottom: 1.35rem; }
     .section-heading .section-title { margin-bottom: .4rem; }
     .section-description { margin: 0; color: var(--muted); font-size: .98rem; line-height: 1.7; }
@@ -428,6 +437,7 @@ with activities, activities_high_school:
         '<p class="section-description">학생회와 동아리 등 학교생활 속 다양한 활동을 담았습니다.</p></div>',
         unsafe_allow_html=True,
     )
+    st.markdown('<h3 class="activity-category-title">🏫 학교 활동</h3>', unsafe_allow_html=True)
     st.markdown(
         """
         <div class="activity-grid">
@@ -450,11 +460,6 @@ with activities, activities_high_school:
             </div>
         </div>
         """,
-        unsafe_allow_html=True,
-    )
-    st.markdown(
-        '<div class="award-line"><strong>2025년 FTA 실무인력 양성사업 모의 무역 실전대회 대상</strong><br>'
-        '자료 조사 및 검토 역할을 맡아 참여했으며, 산업통상부장관상을 수상했습니다.</div>',
         unsafe_allow_html=True,
     )
     st.markdown('<div class="section-kicker">교과 학습 및 탐구</div>', unsafe_allow_html=True)
@@ -489,6 +494,15 @@ with activities, activities_high_school:
         """,
         unsafe_allow_html=True,
     )
+    st.markdown('<h3 class="activity-category-title">🏆 대회 및 수상</h3>', unsafe_allow_html=True)
+    st.markdown(
+        '<div class="award-line"><strong>2025년 FTA 실무인력 양성사업 모의 무역 실전대회 대상</strong><br>'
+        '자료 조사 및 검토 역할을 맡아 참여했으며, 산업통상부장관상을 수상했습니다.</div>',
+        unsafe_allow_html=True,
+    )
+    st.markdown('<h3 class="activity-category-title">🤝 봉사 및 나눔</h3>', unsafe_allow_html=True)
+    st.markdown('<h3 class="activity-category-title">💼 아르바이트 경험</h3>', unsafe_allow_html=True)
+    st.markdown('<h3 class="activity-category-title">🌐 대외활동</h3>', unsafe_allow_html=True)
 
 with vision:
     vision_high_school, _vision_university = st.tabs(subtab_labels)
