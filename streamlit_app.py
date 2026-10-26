@@ -346,6 +346,7 @@ with skills, skills_high_school:
         '<p class="section-description">활용할 수 있는 기술과 도구, 취득한 자격증을 정리했습니다.</p></div>',
         unsafe_allow_html=True,
     )
+    st.markdown('<div class="section-kicker">① 💻 기술 역량</div>', unsafe_allow_html=True)
     st.markdown(
         """
         <div class="info-grid">
@@ -357,11 +358,60 @@ with skills, skills_high_school:
                 <div class="info-label">학습 중인 기술</div>
                 <div class="info-value">IT 전공 기초를 꾸준히 학습하며<br>컴퓨터 활용 역량을 키우고 있습니다.</div>
             </div>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+    st.markdown('<div class="section-kicker">② 🏅 자격증</div>', unsafe_allow_html=True)
+    st.markdown('<h3 class="section-title">취득 완료</h3>', unsafe_allow_html=True)
+    st.markdown(
+        """
+        <div class="info-grid">
             <div class="info-item">
                 <div class="info-label">자격증</div>
-                <div class="info-value">ITQ 한글 A등급<br>ITQ 파워포인트 B등급<br>ITQ 엑셀 A등급</div>
-                <div class="info-label" style="margin-top: 1rem;">취득 계획</div>
+                <div class="info-value">ITQ 아래한글</div>
+                <div class="info-label" style="margin-top: 1rem;">등급 · 취득일</div>
+                <div class="info-value">A등급 · 2024.06.27</div>
+                <div class="info-label" style="margin-top: 1rem;">발급기관</div>
+                <div class="info-value">한국생산성본부(KPC)</div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">자격증</div>
+                <div class="info-value">ITQ 한글파워포인트</div>
+                <div class="info-label" style="margin-top: 1rem;">등급 · 취득일</div>
+                <div class="info-value">B등급 · 2024.08.29</div>
+                <div class="info-label" style="margin-top: 1rem;">발급기관</div>
+                <div class="info-value">한국생산성본부(KPC)</div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">자격증</div>
+                <div class="info-value">ITQ 한글엑셀</div>
+                <div class="info-label" style="margin-top: 1rem;">등급 · 취득일</div>
+                <div class="info-value">A등급 · 2025.01.02</div>
+                <div class="info-label" style="margin-top: 1rem;">발급기관</div>
+                <div class="info-value">한국생산성본부(KPC)</div>
+            </div>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+    st.markdown('<h3 class="section-title">취득 계획</h3>', unsafe_allow_html=True)
+    st.markdown(
+        """
+        <div class="info-grid">
+            <div class="info-item">
+                <div class="info-label">취득 계획</div>
                 <div class="info-value">컴퓨터활용능력 2급</div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">취득 계획</div>
+                <div class="info-value">ITQ 마스터</div>
+                <div class="info-label" style="margin-top: 1rem;">목표</div>
+                <div class="info-value">기존에 취득한 ITQ 한글파워포인트 B등급을 A등급으로 향상</div>
+                <div class="info-label" style="margin-top: 1rem;">현재 등급 · 목표 등급</div>
+                <div class="info-value">B등급 · A등급</div>
+                <div class="info-label" style="margin-top: 1rem;">발급기관</div>
+                <div class="info-value">한국생산성본부(KPC)</div>
             </div>
         </div>
         """,
