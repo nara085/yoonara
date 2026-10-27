@@ -132,6 +132,15 @@ st.markdown(
         line-height: 1.45;
     }
 
+    .vision-category-title {
+        margin: 2rem 0 .85rem;
+        color: var(--ink);
+        font-family: 'Gowun Batang', 'Noto Serif KR', serif;
+        font-size: 1.4rem;
+        font-weight: 700;
+        line-height: 1.45;
+    }
+
     .section-heading { margin-bottom: 1.35rem; }
     .section-heading .section-title { margin-bottom: .4rem; }
     .section-description { margin: 0; color: var(--muted); font-size: .98rem; line-height: 1.7; }
@@ -514,6 +523,7 @@ with vision, vision_high_school:
         '<p class="section-description">관심 분야와 앞으로의 진로 방향 및 목표를 소개합니다.</p></div>',
         unsafe_allow_html=True,
     )
+    st.markdown('<h3 class="vision-category-title">🧭 진로 방향</h3>', unsafe_allow_html=True)
     st.markdown(
         '<p class="intro-copy">소프트웨어공학과에 진학해 전공 지식과 실무 역량을 차근차근 키우고, '
         'IT 분야 중에서도 데이터를 다루는 기업에 취업하는 것이 목표입니다.</p>',
@@ -524,14 +534,28 @@ with vision, vision_high_school:
         <div class="vision-panel">
             <div class="info-label">MY GOAL</div>
             <div class="info-value">소프트웨어공학과 진학 → 데이터 관련 IT 기업 취업</div>
-            <p>꾸준히 배우고 책임감 있게 경험을 쌓아, 데이터를 통해 사람과 세상에 도움이 되는 일을 하고 싶습니다.</p>
         </div>
         <div class="info-grid">
-            <div class="info-item"><div class="info-label">NEXT STEP</div><div class="info-value">소프트웨어공학 전공 공부</div></div>
             <div class="info-item"><div class="info-label">FIELD</div><div class="info-value">IT · 데이터</div></div>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+    st.markdown('<h3 class="vision-category-title">🎓 학업 및 성장 계획</h3>', unsafe_allow_html=True)
+    st.markdown(
+        """
+        <div class="info-grid">
+            <div class="info-item"><div class="info-label">NEXT STEP</div><div class="info-value">소프트웨어공학 전공 공부</div></div>
             <div class="info-item"><div class="info-label">DIRECTION</div><div class="info-value">꾸준한 학습과 실천</div></div>
         </div>
         """,
+        unsafe_allow_html=True,
+    )
+    st.markdown('<h3 class="vision-category-title">💻 기술 및 자격증 계획</h3>', unsafe_allow_html=True)
+    st.markdown('<h3 class="vision-category-title">🚀 프로젝트 및 도전 목표</h3>', unsafe_allow_html=True)
+    st.markdown('<h3 class="vision-category-title">🌱 가치관 및 사회적 기여</h3>', unsafe_allow_html=True)
+    st.markdown(
+        '<div class="vision-panel"><p>꾸준히 배우고 책임감 있게 경험을 쌓아, 데이터를 통해 사람과 세상에 도움이 되는 일을 하고 싶습니다.</p></div>',
         unsafe_allow_html=True,
     )
 
