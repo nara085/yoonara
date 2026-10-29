@@ -302,7 +302,7 @@ st.markdown(
 subtab_labels = ["🏫 고등학교", "🎓 대학교"]
 
 def render_home():
-    hero_text, _hero_photo = st.columns([3, 1])
+    hero_text, hero_photo = st.columns([3, 1], vertical_alignment="center")
     with hero_text:
         st.markdown(
             """
@@ -314,6 +314,8 @@ def render_home():
             """,
             unsafe_allow_html=True,
         )
+    with hero_photo:
+        st.image("IMG/080530.png.JPG", width=190)
     st.markdown('<div class="hero-divider"></div>', unsafe_allow_html=True)
     home_high_school, _home_university = st.tabs(subtab_labels)
     with home_high_school:
