@@ -55,28 +55,53 @@ st.markdown(
 
     .hero p { margin: 0; color: var(--muted); font-size: 1.08rem; }
 
+    [data-testid="stSidebar"],
+    [data-testid="stSidebarContent"],
+    [data-testid="stSidebarNav"] {
+        background-color: #2B2D33 !important;
+    }
+
     [data-testid="stSidebar"] {
-        background: var(--paper);
-        border-right: 1px solid var(--line);
+        min-width: 16rem;
+        border-right: 1px solid #5B606B;
     }
 
     [data-testid="stSidebarNav"] { padding: .85rem .65rem; }
 
+    [data-testid="stSidebarNav"] ul { gap: .4rem; }
+
+    [data-testid="stSidebarNav"] li { margin: .3rem 0; }
+
     [data-testid="stSidebarNav"] a {
         padding: .6rem .7rem;
-        border-radius: 4px;
-        color: var(--ink);
+        border: 1px solid #5B606B !important;
+        border-radius: 5px;
+        background-color: transparent !important;
+        color: #F5F5F5 !important;
         font-weight: 700;
         line-height: 1.45;
         white-space: normal;
+        overflow: visible;
+        text-overflow: clip;
     }
+
+    [data-testid="stSidebarNav"] a * { color: #F5F5F5 !important; }
 
     [data-testid="stSidebarNav"] a[aria-current="page"] {
-        background: #e5eedf;
-        color: var(--green);
+        border-color: #8B93A1 !important;
+        background-color: #454852 !important;
+        color: #FFFFFF !important;
     }
 
-    [data-testid="stSidebarNav"] a:hover { background: #e5eedf; }
+    [data-testid="stSidebarNav"] a[aria-current="page"] * { color: #FFFFFF !important; }
+
+    [data-testid="stSidebarNav"] a:hover {
+        border-color: #8B93A1 !important;
+        background-color: #454852 !important;
+        color: #FFFFFF !important;
+    }
+
+    [data-testid="stSidebarNav"] a:hover * { color: #FFFFFF !important; }
 
     .stTabs [data-baseweb="tab-list"] {
         display: grid;
@@ -274,26 +299,22 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-hero_text, hero_photo = st.columns([3, 1])
-with hero_text:
-    st.markdown(
-        """
-        <div class="hero">
-            <div class="eyebrow">A little about me</div>
-            <h1>안녕하세요,<br>유나라입니다.</h1>
-            <p>배움을 꾸준히 이어가며, 받은 마음을 나누는 사람</p>
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
-with hero_photo:
-    st.image("IMG/080530.png.JPG", width=230)
-
-st.markdown('<div class="hero-divider"></div>', unsafe_allow_html=True)
-
 subtab_labels = ["🏫 고등학교", "🎓 대학교"]
 
 def render_home():
+    hero_text, _hero_photo = st.columns([3, 1])
+    with hero_text:
+        st.markdown(
+            """
+            <div class="hero">
+                <div class="eyebrow">A little about me</div>
+                <h1>안녕하세요,<br>유나라입니다.</h1>
+                <p>배움을 꾸준히 이어가며, 받은 마음을 나누는 사람</p>
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
+    st.markdown('<div class="hero-divider"></div>', unsafe_allow_html=True)
     home_high_school, _home_university = st.tabs(subtab_labels)
     with home_high_school:
         st.markdown('<div class="section-kicker">01 / INTRODUCTION</div>', unsafe_allow_html=True)
